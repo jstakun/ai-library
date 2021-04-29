@@ -16,4 +16,4 @@ $ oc expose svc fraud-detection
 ```
 Make sure to copy fraud model to your s3 bucket. Sample model can be found [here](https://gitlab.com/opendatahub/sample-models/-/tree/master/fraud_detection).
 
-If you want to train the model yourself you can use this [jupyterhub notebook](https://gitlab.com/opendatahub/ai-library/-/blob/master/fraud_detection/training.ipynb) 
+If you want to train the model yourself you can use this [jupyterhub notebook](https://gitlab.com/opendatahub/ai-library/-/blob/master/fraud_detection/training.ipynb). 
