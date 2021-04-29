@@ -1,7 +1,3 @@
-# elastalert-ocp
-
-Run below commands as **cluster-admin** user
-```
 # fraud-detection
 
 Run below commands to build and deploy fraud detector image to OpenShift
