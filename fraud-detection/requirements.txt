@@ -1,0 +1,7 @@
+argparse
+numpy>=1.16.1
+boto3
+scipy>=0.13.3
+scikit-learn==0.21.3
+pandas
+seldon-core==1.2.2
