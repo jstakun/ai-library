@@ -16,4 +16,13 @@ $ oc expose svc fraud-detection
 ```
 Make sure to copy fraud model to your s3 bucket. Sample model can be found [here](https://gitlab.com/opendatahub/sample-models/-/tree/master/fraud_detection).
 
-If you want to train the model yourself you can use this [jupyterhub notebook](https://gitlab.com/opendatahub/ai-library/-/blob/master/fraud_detection/training.ipynb). 
+If you want to create and train the model yourself you can use this [jupyterhub notebook](https://gitlab.com/opendatahub/ai-library/-/blob/master/fraud_detection/training.ipynb). 
+
+Call fraud detection service:
+```
+$ ROUTE=$(oc get route | grep fraud-detection | awk {'print $2'}) && echo ROUTE
+
+$ S3MODEL=fraud_detection/model.pkl
+
+$ curl -v https://$ROUTE/api/v0.1/predictions -d '{"strData":"model=$S3MODEL, data=0.0:-1.3598071337:-0.0727811733:2.536346738:1.3781552243:-0.3383207699:0.4623877778:1491111.62:0.0:0.0:0.0:0.0:0.0:0.0:0.0:0.0:0.0:0.0:0.0:0.0:0.0:0.0:0.0:0.0:0.0:0.0:0.0:0.0:0.0"}' -H "Content-Type: application/json"
+```
