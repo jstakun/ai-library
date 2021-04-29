@@ -18,7 +18,7 @@ Make sure to copy fraud model to your s3 bucket. Sample model can be found [here
 
 If you want to create and train the model yourself you can use this [jupyterhub notebook](https://gitlab.com/opendatahub/ai-library/-/blob/master/fraud_detection/training.ipynb). 
 
-Call fraud detection service:
+Call fraud detector endpoint
 ```
 $ ROUTE=$(oc get route | grep fraud-detection | awk {'print $2'}) && echo ROUTE
 
