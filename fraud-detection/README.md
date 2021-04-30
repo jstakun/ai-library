@@ -10,7 +10,7 @@ $ cd fraud-detection
 
 $ oc start-build fraud-detection --from-dir=. --follow
 
-$ oc new-app fraud-detection MODEL NAME=detect fraud S3ENDPOINTURL='https://s3.openshift-storage.svc' S3ACCESSKEY='BGX7TdXvSSxkq040rny1' S3SECRETKEY='4tcHqwlyqfbDQgoP2nzF/ssA+6Cx5/NaspeeXdRA' S3OBJECTSTORELOCATION='odh-a721d438-b39f-444e-ae4e-285b7a4d8f69' S3REGION=''
+$ oc new-app fraud-detection MODEL NAME=detect_fraud S3ENDPOINTURL='https://s3.openshift-storage.svc' S3ACCESSKEY='BGX7TdXvSSxkq040rny1' S3SECRETKEY='4tcHqwlyqfbDQgoP2nzF/ssA+6Cx5/NaspeeXdRA' S3OBJECTSTORELOCATION='odh-a721d438-b39f-444e-ae4e-285b7a4d8f69' S3REGION=''
 
 $ oc expose svc fraud-detection
 ```
