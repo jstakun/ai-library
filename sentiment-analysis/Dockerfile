@@ -3,7 +3,7 @@ FROM tensorflow/serving
 WORKDIR /tmp
 
 RUN  apt-get update \
-  && apt-get install -y wget \
+  && apt-get install -y git \
   && rm -rf /var/lib/apt/lists/* \
   && git clone https://gitlab.com/opendatahub/sample-models.git
 
