@@ -4,7 +4,7 @@ Run below commands to build and deploy fraud detector image to OpenShift
 ```
 $ oc new-build --strategy docker --docker-image registry.redhat.io/ubi8/python-36 --name fraud-detection -l app=fraud-detection --binary
 
-$ git clone https://githib.com/jstakun/ai-library
+$ git clone https://github.com/jstakun/ai-library
 
 $ cd fraud-detection
 
